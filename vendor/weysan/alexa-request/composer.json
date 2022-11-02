@@ -1,0 +1,26 @@
+{
+    "name": "weysan/alexa-request",
+    "description": "Handle Amazon's Alexa Incoming and Outgoing requests in PHP",
+    "type": "library",
+    "require": {
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "symfony/http-foundation": "^3.2",
+        "symfony/psr-http-message-bridge": "^1.0",
+        "zendframework/zend-diactoros": "^1.5",
+        "phplint/phplint": "^0.0.1",
+        "phpunit/phpunit": "^5.7",
+        "mockery/mockery": "^0.9.9",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"Weysan\\Alexa\\": "./"}
+    },
+    "authors": [
+        {
+            "name": "Raphaël GONCALVES",
+            "email": "contact@raphael-goncalves.fr"
+        }
+    ]
+}

@@ -1,0 +1,164 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ca1d1676b51a13a98d1078cd3d0cd1f4",
+    "packages": [
+        {
+            "name": "minicodemonkey/amazon-alexa-php",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MiniCodeMonkey/amazon-alexa-php.git",
+                "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MiniCodeMonkey/amazon-alexa-php/zipball/006a1e1e775d8429574cde1a093a8b9a4da6a960",
+                "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alexa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathias Hansen",
+                    "email": "me@codemonkey.io"
+                }
+            ],
+            "description": "Amazon Alexa interface for PHP",
+            "support": {
+                "issues": "https://github.com/MiniCodeMonkey/amazon-alexa-php/issues",
+                "source": "https://github.com/MiniCodeMonkey/amazon-alexa-php/tree/master"
+            },
+            "time": "2015-11-29T21:50:59+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "weysan/alexa-request",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Weysan/alexa-request.git",
+                "reference": "f34e1074d5d325875dd27a5fd5979618fd762af4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Weysan/alexa-request/zipball/f34e1074d5d325875dd27a5fd5979618fd762af4",
+                "reference": "f34e1074d5d325875dd27a5fd5979618fd762af4",
+                "shasum": ""
+            },
+            "require": {
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.9",
+                "phplint/phplint": "^0.0.1",
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "dev-master",
+                "symfony/http-foundation": "^3.2",
+                "symfony/psr-http-message-bridge": "^1.0",
+                "zendframework/zend-diactoros": "^1.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Weysan\\Alexa\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Raphaël GONCALVES",
+                    "email": "contact@raphael-goncalves.fr"
+                }
+            ],
+            "description": "Handle Amazon's Alexa Incoming and Outgoing requests in PHP",
+            "support": {
+                "issues": "https://github.com/Weysan/alexa-request/issues",
+                "source": "https://github.com/Weysan/alexa-request/tree/master"
+            },
+            "time": "2017-10-22T16:19:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "weysan/alexa-request": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

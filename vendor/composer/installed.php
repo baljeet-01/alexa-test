@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'name' => 'baljeet/alexa',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'baljeet/alexa' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'minicodemonkey/amazon-alexa-php' => array(
+            'pretty_version' => '0.1.5',
+            'version' => '0.1.5.0',
+            'reference' => '006a1e1e775d8429574cde1a093a8b9a4da6a960',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../minicodemonkey/amazon-alexa-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'weysan/alexa-request' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'f34e1074d5d325875dd27a5fd5979618fd762af4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../weysan/alexa-request',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+    ),
+);
