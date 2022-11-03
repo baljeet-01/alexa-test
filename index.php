@@ -18,11 +18,12 @@ require 'handler.php';
  * returning json response
  */
 $jsonDataAsArray = file_get_contents('php://input');
-if ($jsonDataAsArray || 1==1) {
+if ($jsonDataAsArray) {
 	$alexaRequest = \Alexa\Request\Request::fromData($jsonDataAsArray);
 	$response = new \Alexa\Response\Response;
 	$response->respond('I\'m your response message');
-	return response()->json($response->render());
+	header('Content-Type: application/json');
+	echo json_encode($response->render());
 } else {
     http_response_code(400);
 }
