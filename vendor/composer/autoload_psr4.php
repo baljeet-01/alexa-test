@@ -7,7 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Weysan\\Alexa\\' => array($vendorDir . '/weysan/alexa-request'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
+    'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
+    'MaxBeckers\\AmazonAlexa\\' => array($vendorDir . '/maxbeckers/amazon-alexa-php/src'),
+    'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
+    'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
+    'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Baljeet\\Alexa\\' => array($baseDir . '/src'),
     'Alexa\\' => array($vendorDir . '/minicodemonkey/amazon-alexa-php/src'),
 );

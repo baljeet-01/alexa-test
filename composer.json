@@ -13,6 +13,7 @@
     ],
     "require": {
         "minicodemonkey/amazon-alexa-php": "^0.1.5",
-        "weysan/alexa-request": "dev-master"
+        "weysan/alexa-request": "dev-master",
+        "maxbeckers/amazon-alexa-php": "^1.11"
     }
 }
