@@ -19,7 +19,7 @@ require 'handler.php';
  */
 
 $jsonDataAsArray=json_decode(file_get_contents("php://input"));
-if ($jsonDataAsArray) {
+if ($jsonDataAsArray && 1==2) {
 	$alexaRequest = \Alexa\Request\Request::fromData($jsonDataAsArray);
 	$response = new \Alexa\Response\Response;
 	$response->respond('I\'m your response message');
