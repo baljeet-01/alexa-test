@@ -20,28 +20,57 @@ require 'handler.php';
  */
 
 $jsonDataAsArray=json_decode(file_get_contents("php://input"),true);
-if ($jsonDataAsArray) {
-	$alexaRequest = \Alexa\Request\Request::fromData($jsonDataAsArray);
-	if ($alexaRequest instanceof LaunchRequest) {
+if ($jsonDataAsArray) {			
+
+	if ($jsonDataAsArray['request']['type'] == 'LaunchRequest') {
 		// Handle intent here
-		$response = new \Alexa\Response\Response;
-		$response->respond('I\'m your response message')->reprompt('Please tell me your favorite color');
+		$response = [
+				    "version"=> "1.0",
+				    "sessionAttributes"=> [],
+				    "response"=> [
+				        "outputSpeech"=> [
+				            "type"=> "PlainText",
+				            "text"=> "Hello, Welcome to Men Rocks. What would you like me to do? you can try saying check inventory for an item."
+				        ],
+				        "card"=> null,
+				        "shouldEndSession"=> false
+				    ]
+				];
 		header('Content-Type: application/json');
-		echo json_encode($response->render());
+		echo json_encode($response);
 	}
-} else {
-    $response = new \Alexa\Response\Response;
-	$response->respond('I\'m not sure how to respond to that');
-	header('Content-Type: application/json');
+	else if ($jsonDataAsArray['request']['type'] == 'IntentRequest'){
+		$response = [
+				    "version"=> "1.0",
+				    "sessionAttributes"=> [],
+				    "response"=> [
+				        "outputSpeech"=> [
+				            "type"=> "PlainText",
+				            "text"=> "I'm your response message"
+				        ],
+				        "card"=> null,
+				        "shouldEndSession"=> false
+				    ]
+				];
+		header('Content-Type: application/json');
+		echo json_encode($response);
+	}
+} 
+else {
 	$response = [
-	  "response" => [
-	    "outputSpeech" => [
-	      "type" => "PlainText",
-	      "text" => "I'm a little girl"
-	    ]
-	  ]
-	];
+				    "version"=> "1.0",
+				    "sessionAttributes"=> [],
+				    "response"=> [
+				        "outputSpeech"=> [
+				            "type"=> "PlainText",
+				            "text"=> "I am not sure how to respond to that. Can you please try again?"
+				        ],
+				        "card"=> null
+				    ]
+				];
+	header('Content-Type: application/json');
 	echo json_encode($response);
+}
 }
 
 exit();
