@@ -4,6 +4,7 @@
 // use MaxBeckers\AmazonAlexa\RequestHandler\Basic\HelpRequestHandler;
 // use MaxBeckers\AmazonAlexa\RequestHandler\RequestHandlerRegistry;
 // use MaxBeckers\AmazonAlexa\Validation\RequestValidator;
+use \Alexa\Request\LaunchRequest;
 
 require 'vendor/autoload.php';
 require 'handler.php';
@@ -21,10 +22,13 @@ require 'handler.php';
 $jsonDataAsArray=json_decode(file_get_contents("php://input"),true);
 if ($jsonDataAsArray) {
 	$alexaRequest = \Alexa\Request\Request::fromData($jsonDataAsArray);
-	$response = new \Alexa\Response\Response;
-	$response->respond('I\'m your response message');
-	header('Content-Type: application/json');
-	echo json_encode($response->render());
+	if ($alexaRequest instanceof LaunchRequest) {
+		// Handle intent here
+		$response = new \Alexa\Response\Response;
+		$response->reprompt('I\'m your response message');
+		header('Content-Type: application/json');
+		echo json_encode($response->render());
+	}
 } else {
     $response = new \Alexa\Response\Response;
 	$response->respond('I\'m not sure how to respond to that');
