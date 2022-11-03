@@ -17,7 +17,8 @@ require 'handler.php';
  * handling request
  * returning json response
  */
-$jsonDataAsArray = file_get_contents('php://input');
+
+$jsonDataAsArray = json_decode($_REQUEST['request']);
 if ($jsonDataAsArray) {
 	$alexaRequest = \Alexa\Request\Request::fromData($jsonDataAsArray);
 	$response = new \Alexa\Response\Response;
