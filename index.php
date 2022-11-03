@@ -29,7 +29,15 @@ if ($jsonDataAsArray) {
     $response = new \Alexa\Response\Response;
 	$response->respond('I\'m not sure how to respond to that');
 	header('Content-Type: application/json');
-	echo json_encode($response->render());
+	$response = [
+	  "response" => [
+	    "outputSpeech" => [
+	      "type" => "PlainText",
+	      "text" => "I'm a little teapot"
+	    ]
+	  ]
+	];
+	echo json_encode($response);
 }
 
 exit();
