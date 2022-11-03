@@ -25,7 +25,7 @@ if ($jsonDataAsArray) {
 	if ($alexaRequest instanceof LaunchRequest) {
 		// Handle intent here
 		$response = new \Alexa\Response\Response;
-		$response->reprompt('I\'m your response message');
+		$response->respond('I\'m your response message');
 		header('Content-Type: application/json');
 		echo json_encode($response->render());
 	}
