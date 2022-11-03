@@ -26,7 +26,10 @@ if ($jsonDataAsArray) {
 	header('Content-Type: application/json');
 	echo json_encode($response->render());
 } else {
-    http_response_code(400);
+    $response = new \Alexa\Response\Response;
+	$response->respond('I\'m not sure how to respond to that');
+	header('Content-Type: application/json');
+	echo json_encode($response->render());
 }
 
 exit();
