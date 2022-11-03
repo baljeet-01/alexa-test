@@ -33,7 +33,7 @@ if ($jsonDataAsArray) {
 	  "response" => [
 	    "outputSpeech" => [
 	      "type" => "PlainText",
-	      "text" => "I'm a little teapot"
+	      "text" => "I'm a little girl"
 	    ]
 	  ]
 	];
