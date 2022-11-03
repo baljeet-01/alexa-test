@@ -3,7 +3,7 @@
         'name' => 'baljeet/alexa',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3dbece673ae39cd941af99e3fb6ebbd2181baaaa',
+        'reference' => '1349b7de893e52a27e2557692543d9981c27d19f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'baljeet/alexa' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3dbece673ae39cd941af99e3fb6ebbd2181baaaa',
+            'reference' => '1349b7de893e52a27e2557692543d9981c27d19f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
