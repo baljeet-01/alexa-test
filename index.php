@@ -32,6 +32,37 @@ if ($jsonDataAsArray) {
 				            "type"=> "PlainText",
 				            "text"=> "Hello, Welcome to Men Rocks. This is response from Cake Time server."
 				        ],
+    				    "directives" => [
+    				    	[
+    				    		"type"=> "Dialog.UpdateDynamicEntities",
+		    		            "updateBehavior"=> "REPLACE",
+		    		            "types"=> [
+		    		                [
+		    		                    "name"=> "secretType",
+		    		                    "values"=> [
+		    		                        [
+		    		                            "id"=> "1",
+		    		                            "name"=> [
+		    		                                "value"=> "Logan International Airport",
+		    		                                "synonyms"=> [
+		    		                                    "Boston Logan"
+		    		                                ]
+		    		                            ]
+		    		                        ],
+		    		                        [
+		    		                            "id"=> "2",
+		    		                            "name"=> [
+		    		                                "value"=> "LaGuardia Airport",
+		    		                                "synonyms"=> [
+		    		                                    "New York"
+		    		                                ]
+		    		                            ]
+		    		                        ]
+		    		                    ]
+		    		                ]
+		    		            ]
+    				    	]
+    				    ],
 				        "card"=> null,
 				        "shouldEndSession"=> false
 				    ]
