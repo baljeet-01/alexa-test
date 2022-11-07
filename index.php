@@ -79,8 +79,7 @@ if ($jsonDataAsArray) {
 				            "type"=> "PlainText",
 				            "text"=> "I'm your response message"
 				        ],
-				        "card"=> null,
-				        "shouldEndSession"=> false
+				        "card"=> null
 				    ]
 				];
 		header('Content-Type: application/json');
