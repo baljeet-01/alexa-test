@@ -30,7 +30,7 @@ if ($jsonDataAsArray) {
 				    "response"=> [
 				        "outputSpeech"=> [
 				            "type"=> "PlainText",
-				            "text"=> "Hello, Welcome to Men Rocks. What would you like me to do? you can try saying check inventory for an item."
+				            "text"=> "Hello, Welcome to Men Rocks. This is response from Cake Time server."
 				        ],
 				        "card"=> null,
 				        "shouldEndSession"=> false
