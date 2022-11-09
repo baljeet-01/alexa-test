@@ -41,30 +41,18 @@ if ($jsonDataAsArray) {
 		    		                    "name"=> "StrikeType",
 		    		                    "values"=> [
 		    		                        [
-		    		                        	"id"=> "1",
 		    		                            "name"=> [
-		    		                                "value"=> "not punctual",
-		    		                                "synonyms"=> [
-		    		                                    "not punctual"
-		    		                                ]
+		    		                                "value"=> "not punctual"
 		    		                            ]
 		    		                        ],
 		    		                        [
-		    		                        	"id"=> "2",
 		    		                            "name"=> [
-		    		                                "value"=> "high absenteism",
-		    		                                "synonyms"=> [
-		    		                                    "high absenteism"
-		    		                                ]
+		    		                                "value"=> "high absenteism"
 		    		                            ]
 		    		                        ],
 		    		                        [
-		    		                        	"id"=> "3",
 		    		                            "name"=> [
-		    		                                "value"=> "data mistakes",
-		    		                                "synonyms"=> [
-		    		                                    "data mistakes"
-		    		                                ]
+		    		                                "value"=> "data mistakes"
 		    		                            ]
 		    		                        ],
 		    		                    ]
