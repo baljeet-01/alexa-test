@@ -8,7 +8,7 @@ use \Alexa\Request\LaunchRequest;
 
 require 'vendor/autoload.php';
 require 'handler.php';
-session_start();
+
 /**
  * Simple example for request handling workflow with help example
  * loading json
@@ -75,25 +75,34 @@ if ($jsonDataAsArray) {
 
 
 			$slotValues = $jsonDataAsArray['request']['intent']['slots'];
-
+			$strikeType = '';
+			$username = '';
+			$userId = '';
 			if(isset($slotValues['strikeType']['value']) && $slotValues['strikeType']['value'] != 'NULL')
 			{
-				$_SESSION['strikeType'] = $slotValues['strikeType']['value'];
+				$strikeType = $slotValues['strikeType']['value'];
+			}
+			else if(isset($jsonDataAsArray['session']['attributes']['strikeType']) && $jsonDataAsArray['session']['attributes']['strikeType']){
+				$strikeType = $slotValues['session']['attributes']['strikeType'];
 			}
 
 			if(isset($slotValues['username']['value']) && $slotValues['username']['value'] != 'NULL')
 			{
-				$_SESSION['username'] = $slotValues['username']['value'];
+				$username = $slotValues['username']['value'];
+			}
+			else if(isset($jsonDataAsArray['session']['attributes']['username']) && $jsonDataAsArray['session']['attributes']['username']){
+				$username = $slotValues['session']['attributes']['username'];
 			}
 
 			if(isset($slotValues['userId']['value']) && $slotValues['userId']['value'] != 'NULL')
 			{
-				$_SESSION['userId'] = $slotValues['userId']['value'];
+				$userId = $slotValues['userId']['value'];
+			}
+			else if(isset($jsonDataAsArray['session']['attributes']['userId']) && $jsonDataAsArray['session']['attributes']['userId']){
+				$userId = $slotValues['session']['attributes']['userId'];
 			}
 
-			$strikeType = isset($_SESSION['strikeType'])? $_SESSION['strikeType'] : false;
-			$username = isset($_SESSION['username'])? $_SESSION['username'] : false;
-			$userId = isset($_SESSION['userId'])? $_SESSION['userId'] : false;
+
 
 			$speakout = 'strike type is '.$strikeType.' user name is '.$username.' user id is '.$userId;
 
