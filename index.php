@@ -105,7 +105,13 @@ if ($jsonDataAsArray) {
 					            "type"=> "PlainText",
 					            "text"=> $speakout
 					        ],
-					        "card"=> null
+					        "card"=> null,
+					        "shouldEndSession"=> false,
+					        "sessionAttributes"=> [
+					        	'strikeType' => $strikeType,
+					        	'username' => $username,
+					        	'userId' => $userId
+					        ]
 					    ]
 					];			
 		}
