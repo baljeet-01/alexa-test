@@ -106,13 +106,13 @@ if ($jsonDataAsArray) {
 					            "text"=> $speakout
 					        ],
 					        "card"=> null,
-					        "shouldEndSession"=> false,
-					        "sessionAttributes"=> [
-					        	'strikeType' => $strikeType,
-					        	'username' => $username,
-					        	'userId' => $userId
-					        ]
-					    ]
+					        "shouldEndSession"=> false
+					    ],
+				        "sessionAttributes"=> [
+				        	'strikeType' => $strikeType,
+				        	'username' => $username,
+				        	'userId' => $userId
+				        ]
 					];			
 		}
 		header('Content-Type: application/json');
