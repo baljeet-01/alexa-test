@@ -38,24 +38,16 @@ if ($jsonDataAsArray) {
 		    		            "updateBehavior"=> "REPLACE",
 		    		            "types"=> [
 		    		                [
-		    		                    "name"=> "secretType",
+		    		                    "name"=> "strikeType",
 		    		                    "values"=> [
 		    		                        [
-		    		                            "id"=> "1",
 		    		                            "name"=> [
-		    		                                "value"=> "Logan International Airport",
-		    		                                "synonyms"=> [
-		    		                                    "Boston Logan"
-		    		                                ]
+		    		                                "value"=> "Not Punctual"
 		    		                            ]
 		    		                        ],
 		    		                        [
-		    		                            "id"=> "2",
 		    		                            "name"=> [
-		    		                                "value"=> "LaGuardia Airport",
-		    		                                "synonyms"=> [
-		    		                                    "New York"
-		    		                                ]
+		    		                                "value"=> "high absenteism"
 		    		                            ]
 		    		                        ]
 		    		                    ]
@@ -70,8 +62,10 @@ if ($jsonDataAsArray) {
 		header('Content-Type: application/json');
 		echo json_encode($response);
 	}
-	else if ($jsonDataAsArray['request']['type'] == 'IntentRequest'){
-		if ($jsonDataAsArray['request']['intent']['name'] == 'assignStrikePoints') {
+	else if ($jsonDataAsArray['request']['type'] == 'IntentRequest')
+	{
+		if ($jsonDataAsArray['request']['intent']['name'] == 'assignStrikePoints')
+		{
 
 
 			$slotValues = $jsonDataAsArray['request']['intent']['slots'];
