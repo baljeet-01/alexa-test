@@ -38,7 +38,7 @@ if ($jsonDataAsArray) {
 		    		            "updateBehavior"=> "REPLACE",
 		    		            "types"=> [
 		    		                [
-		    		                    "name"=> "strikeType",
+		    		                    "name"=> "StrikeType",
 		    		                    "values"=> [
 		    		                        [
 		    		                        	"id"=> "1",
