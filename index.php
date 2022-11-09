@@ -43,13 +43,19 @@ if ($jsonDataAsArray) {
 		    		                        [
 		    		                        	"id"=> "1",
 		    		                            "name"=> [
-		    		                                "value"=> "Not Punctual"
+		    		                                "value"=> "Not Punctual",
+		    		                                "synonyms"=> [
+		    		                                    "Not Punctual"
+		    		                                ]
 		    		                            ]
 		    		                        ],
 		    		                        [
 		    		                        	"id"=> "2",
 		    		                            "name"=> [
-		    		                                "value"=> "high absenteism"
+		    		                                "value"=> "high absenteism",
+		    		                                "synonyms"=> [
+		    		                                    "high absenteism"
+		    		                                ]
 		    		                            ]
 		    		                        ]
 		    		                    ]
