@@ -83,7 +83,7 @@ if ($jsonDataAsArray) {
 				$strikeType = $slotValues['strikeType']['value'];
 			}
 			else if(isset($jsonDataAsArray['session']['attributes']['strikeType']) && $jsonDataAsArray['session']['attributes']['strikeType']){
-				$strikeType = $slotValues['session']['attributes']['strikeType'];
+				$strikeType = $jsonDataAsArray['session']['attributes']['strikeType'];
 			}
 
 			if(isset($slotValues['username']['value']) && $slotValues['username']['value'] != 'NULL')
@@ -91,7 +91,7 @@ if ($jsonDataAsArray) {
 				$username = $slotValues['username']['value'];
 			}
 			else if(isset($jsonDataAsArray['session']['attributes']['username']) && $jsonDataAsArray['session']['attributes']['username']){
-				$username = $slotValues['session']['attributes']['username'];
+				$username = $jsonDataAsArray['session']['attributes']['username'];
 			}
 
 			if(isset($slotValues['userId']['value']) && $slotValues['userId']['value'] != 'NULL')
@@ -99,7 +99,7 @@ if ($jsonDataAsArray) {
 				$userId = $slotValues['userId']['value'];
 			}
 			else if(isset($jsonDataAsArray['session']['attributes']['userId']) && $jsonDataAsArray['session']['attributes']['userId']){
-				$userId = $slotValues['session']['attributes']['userId'];
+				$userId = $jsonDataAsArray['session']['attributes']['userId'];
 			}
 
 
