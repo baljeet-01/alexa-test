@@ -8,7 +8,7 @@ use \Alexa\Request\LaunchRequest;
 
 require 'vendor/autoload.php';
 require 'handler.php';
-
+session_start();
 /**
  * Simple example for request handling workflow with help example
  * loading json
@@ -71,17 +71,44 @@ if ($jsonDataAsArray) {
 		echo json_encode($response);
 	}
 	else if ($jsonDataAsArray['request']['type'] == 'IntentRequest'){
-		$response = [
-				    "version"=> "1.0",
-				    "sessionAttributes"=> [],
-				    "response"=> [
-				        "outputSpeech"=> [
-				            "type"=> "PlainText",
-				            "text"=> "I'm your response message"
-				        ],
-				        "card"=> null
-				    ]
-				];
+		if ($jsonDataAsArray['request']['intent']['name'] == 'assignStrikePoints') {
+
+
+			$slotValues = $jsonDataAsArray['request']['intent']['slots'];
+
+			if(isset($slotValues['strikeType']['value']) && $slotValues['strikeType']['value'] != 'NULL')
+			{
+				$_SESSION['strikeType'] = $slotValues['strikeType']['value'];
+			}
+
+			if(isset($slotValues['username']['value']) && $slotValues['username']['value'] != 'NULL')
+			{
+				$_SESSION['username'] = $slotValues['username']['value'];
+			}
+
+			if(isset($slotValues['userId']['value']) && $slotValues['userId']['value'] != 'NULL')
+			{
+				$_SESSION['userId'] = $slotValues['userId']['value'];
+			}
+
+			$strikeType = isset($_SESSION['strikeType'])? $_SESSION['strikeType'] : false;
+			$username = isset($_SESSION['username'])? $_SESSION['username'] : false;
+			$userId = isset($_SESSION['userId'])? $_SESSION['userId'] : false;
+
+			$speakout = 'strike type is '.$strikeType.' user name is '.$username.' user id is '.$userId;
+
+			$response = [
+					    "version"=> "1.0",
+					    "sessionAttributes"=> [],
+					    "response"=> [
+					        "outputSpeech"=> [
+					            "type"=> "PlainText",
+					            "text"=> $speakout
+					        ],
+					        "card"=> null
+					    ]
+					];			
+		}
 		header('Content-Type: application/json');
 		echo json_encode($response);
 	}
